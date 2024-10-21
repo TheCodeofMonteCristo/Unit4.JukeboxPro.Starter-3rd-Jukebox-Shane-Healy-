@@ -1,11 +1,24 @@
 {
-  "name": "38-jukebox_pro",
+  "name": "jukebox-pro",
   "version": "1.0.0",
-  "description": "Introducing Jukebox Pro, the successor to Jukebox! Users will now need to make an account and log in before they are able to manage their playlists.",
-  "main": "server.js",
+  "description": "A music playlist management application",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "seed": "node prisma/seed.js",
+    "migrate": "npx prisma migrate dev --name init"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "@prisma/client": "^2.20.1"
+  },
+  "devDependencies": {
+    "prisma": "^2.20.1"
+  },
+  "author": "Shane Healy",
+  "license": "MIT"
 }
